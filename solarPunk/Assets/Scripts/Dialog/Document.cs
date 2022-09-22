@@ -5,6 +5,9 @@ using UnityEngine;
 [CreateAssetMenu (fileName ="New Document", menuName ="Document")]
 public class Document : ScriptableObject
 {
-    [SerializeField] string documentTitle;
-    [SerializeField] string documentDescription; 
+    public string documentTitle;
+    public string documentDescription;
+    //0 = destructive, 1 = ecological  
+    public int documentType;
+    public int influence; 
 }
