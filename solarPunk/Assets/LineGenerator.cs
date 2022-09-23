@@ -7,6 +7,7 @@ public class LineGenerator : MonoBehaviour
 {
     public GameObject linePref;
     Drawing activeLine;
+    public bool hancock;
 
     private void Update()
     {
@@ -21,6 +22,7 @@ public class LineGenerator : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 activeLine = null;
+                hancock = true;
             }
 
             if (activeLine != null)

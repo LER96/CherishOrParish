@@ -7,7 +7,5 @@ public class Document : ScriptableObject
 {
     public string documentTitle;
     public string documentDescription;
-    //0 = destructive, 1 = ecological  
-    public int documentType;
     public int influence; 
 }
