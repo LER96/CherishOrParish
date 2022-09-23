@@ -552,7 +552,7 @@ GameObject:
   - component: {fileID: 1618400773}
   m_Layer: 0
   m_Name: LineGenerator
-  m_TagString: Untagged
+  m_TagString: Line
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -570,6 +570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linePref: {fileID: 983465213818741878, guid: 5e3267d72e0ac8c4294e909eddf26789, type: 3}
+  hancock: 0
 --- !u!4 &1618400774
 Transform:
   m_ObjectHideFlags: 0
@@ -839,7 +840,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2090035829}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1618400773}
+        m_MethodName: ResetLine
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2090035829
 MonoBehaviour:
   m_ObjectHideFlags: 0
