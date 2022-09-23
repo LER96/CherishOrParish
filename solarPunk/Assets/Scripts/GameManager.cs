@@ -17,11 +17,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] int randomFile;
     [SerializeField] public int page=0;
     [SerializeField] public bool candraw;
-    LineGenerator line;
+
+    [SerializeField] LineGenerator line;
+    [SerializeField] int count;
     // Start is called before the first frame update
     void Start()
     {
-        //button.SetActive(false);
         //line = GameObject.FindGameObjectWithTag("Line").GetComponent<LineGenerator>();
         if (allDocuments!=null)
         {
@@ -31,69 +32,74 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        //if (line.hancock)
-        //{
-        //    button.SetActive(true);
-        //}
-        CheckIfFinished();
-    }
-
-    public void CheckIfFinished()
-    {
-        int count = 0;
-        for(int i=0; i<partFiles.Length;i++)
+        line = GameObject.FindGameObjectWithTag("Line").GetComponent<LineGenerator>();
+        if (count == 3)
         {
-            if(partFiles[i].checkbox!=0)
-            {
-                count++;
-            }
-            if(count==2)
+            candraw = true;
+            if (line.hancock)
             {
                 moveOn.SetActive(true);
-                candraw = true;
             }
         }
     }
 
+    //button appear when you sign
     public void MoveON()
     {
-        for(int i=0; i<partFiles.Length;i++)
-        {
-            if(allDocuments.Contains(partFiles[i]))
-            {
-                allDocuments.Remove(partFiles[i]);
-            }
-        }
+        candraw = false;
         TakeDoc();
     }
 
+    //V button
     public void Sign()
     {
         totalScore += partFiles[page].influence;
+        if (partFiles[page].checkbox == 0)
+        {
+            count++;
+        }
         partFiles[page].checkbox = 1;
+        if(page<2)
+        {
+            page++;
+        }
         //button.SetActive(false);
         //RemoveDoc();
     }
+
+    //X button
     public void RemoveDoc()
     {
+        if (partFiles[page].checkbox == 0)
+        {
+            count++;
+        }
         partFiles[page].checkbox = -1;
+        if (page < 2)
+        {
+            page++;
+        }
         //allDocuments.Remove(allDocuments[randomFile]);
         //TakeDoc();
     }
 
+    //Get The Page
     public void ChangePaper(int num)
     {
         page = num;
     }
 
+    //Take 3 documents from the list
+    //restore all values
     public void TakeDoc()
     {
-        candraw = false;
+        count = 0;
         moveOn.SetActive(false);
-        for (int i = 0; i < partFiles.Length; i++)
+        candraw = false;
+        for (int i = 0; i < 3; i++)
         {
-            randomFile = Random.Range(0, allDocuments.Count);
-            partFiles[i] = allDocuments[randomFile];
+            allDocuments[i].checkbox=0;
+            partFiles[i] = allDocuments[i];
         }
         //doc = allDocuments[randomFile];
     }

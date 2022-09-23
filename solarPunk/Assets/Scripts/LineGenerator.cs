@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class LineGenerator : MonoBehaviour
 {
     //public GameObject linePref;
-    GameObject linePref;
+    [SerializeField] GameObject linePref;
     GameManager man;
     Drawing activeLine;
     public bool hancock;
@@ -16,12 +16,13 @@ public class LineGenerator : MonoBehaviour
     private void Start()
     {
         linePref= GameObject.FindGameObjectWithTag("Manager");
-        man = linePref.GetComponent<GameManager>();
+        //man = linePref.GetComponent<GameManager>();
         line = GameObject.FindGameObjectWithTag("Line").GetComponent<Drawing>();
     }
 
     private void Update()
     {
+        man = linePref.GetComponent<GameManager>();
         if (man.candraw)
         {
             if (IsMouseOnImage() == true)
