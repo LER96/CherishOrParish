@@ -5,12 +5,12 @@ using UnityEngine;
 [RequireComponent(typeof(EdgeCollider2D))]
 public class LineCollision : MonoBehaviour
 {
-    EdgeCollider2D collider;
+    EdgeCollider2D edgeCollider;
     LineRenderer line;
 
     private void Start()
     {
-        collider = this.GetComponent<EdgeCollider2D>();
+        edgeCollider = this.GetComponent<EdgeCollider2D>();
         line = this.GetComponent<LineRenderer>();
     }
 
@@ -28,7 +28,5 @@ public class LineCollision : MonoBehaviour
             Vector3 lineRenderPoint = line.GetPosition(point++);
             edges.Add(new Vector2(lineRenderPoint.x, lineRenderPoint.y));
         }
-
     }
-
 }
