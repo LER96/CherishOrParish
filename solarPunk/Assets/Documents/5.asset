@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59485859a8019c64c887551f3433690f, type: 3}
+  m_Name: 5
+  m_EditorClassIdentifier: 
+  date: 31/03/2053
+  documentTitle: Solar Transparency Act
+  documentStart: While these will be financially heavy endeavours, I believe that
+    making an executive decision to replace current existing windows in all office
+    towers with transparent solar panels could hold immense value.
+  documentmMiddle: "Some of the price will repay itself in time from the energy we
+    generate, but more importantly, it\u2019ll greatly aid us make a change for the
+    better in our environment. "
+  documentEnd: 'Sincerely, Dr. Aashvi Patel '
+  sign: 'Your Signature: _____________________  Clerk of the Planetary Bureau of
+    Technology and Ecology '
+  influence: 100
+  checkbox: 0

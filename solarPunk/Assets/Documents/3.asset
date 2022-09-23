@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59485859a8019c64c887551f3433690f, type: 3}
-  m_Name: 2
+  m_Name: 3
   m_EditorClassIdentifier: 
-  date: 07/05/2053
-  documentTitle: Greener Gardens
-  documentStart: The city of Fortia has been looking more and more neglected since
-    the construction of the second Entek office tower.
-  documentmMiddle: I humbly request, in the name of other citizens and I, that you
-    grant more land to well kept gardens rather than an Entek parking lot.
-  documentEnd: 'Sincerely,  Edward Jones, A concerned citizen. '
+  date: 01/05/2053
+  documentTitle: Further Housing Request
+  documentStart: With the recent legislation limiting the construction of new buildings,
+    we found ourselves with a housing shortage in Fortia.
+  documentmMiddle: "We require: \u2014Construction of new building complexes in Fortia "
+  documentEnd: 'Sincerely,  Alejandro Alvarez, Citizen of Fortia '
   sign: 'Your Signature: _____________________  Clerk of the Planetary Bureau of
     Technology and Ecology '
   influence: 100
-  checkbox: 1
+  checkbox: 0

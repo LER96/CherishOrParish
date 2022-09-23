@@ -2,12 +2,21 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-public class DocumentManager: MonoBehaviour
+public class DocumentManager : MonoBehaviour
 {
     GameManager manage;
+
+    public TMP_Text date;
     public TMP_Text nameText;
-    public TMP_Text descriptionText;
+    public TMP_Text startDescriptionText;
+    public TMP_Text middleDescriptionText;
+    public TMP_Text endDescriptionText;
+    public TMP_Text signText;
+
     int p;
+
+    char dots = ':';
+    char lines = '—';
     //public Image docArt;
     private void Start()
     {
@@ -17,13 +26,31 @@ public class DocumentManager: MonoBehaviour
     private void Update()
     {
         manage = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
-        Debug.Log(p);
+        middleDescriptionText.text = manage.partFiles[p].documentmMiddle;
+        char[] words = manage.partFiles[p].documentmMiddle.ToCharArray();
+        for (int i = 0; i < words.Length; i++)
+        {
+            if (words[i] == dots || words[i] == lines)
+            {
+                Split(i);
+            }
+        }
+
         p = manage.page;
+
+        date.text = manage.partFiles[p].date;
         nameText.text = manage.partFiles[p].documentTitle;
-        descriptionText.text = manage.partFiles[p].documentDescription;
+        startDescriptionText.text = manage.partFiles[p].documentStart;
+        //middleDescriptionText.text = manage.partFiles[p].documentmMiddle;
+        endDescriptionText.text = manage.partFiles[p].documentEnd;
+        signText.text = manage.partFiles[p].sign;
 
     }
 
+    public void Split(int num)
+    {
+        middleDescriptionText.text = middleDescriptionText.text.Insert(num, "\n");
+    }
 }
 
 

@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59485859a8019c64c887551f3433690f, type: 3}
-  m_Name: 0
+  m_Name: 7
   m_EditorClassIdentifier: 
-  date: 20/04/2053
-  documentTitle: 'The Super Computer Acceleration Act '
+  date: 17/04/2053
+  documentTitle: The Nano-Wilds Initiative
   documentStart: 'With natural disasters and deforestation, our world sorely needs
     natural areas restored. Using the newest Nano-helper 2.7 from NanO Inc., we can
     plant seeds and compost at extreme efficiency. '
-  documentmMiddle: "What we need:\u2014Exclusivity deal between NanO Inc.and the
-    government.\u2014Allow the construction of additional NanO Inc. production facilities. "
+  documentmMiddle: "What we need: \u2014Exclusivity deal between NanO Inc. and the
+    government. \u2014Allow the construction of additional NanO Inc. production facilities. "
   documentEnd: 'Sincerely,  Johan Collins, Chief Technological Officer of NanO Inc. '
   sign: 'Your Signature: _____________________  Clerk of the Planetary Bureau of
     Technology and Ecology '
-  influence: -50
+  influence: 100
   checkbox: 0

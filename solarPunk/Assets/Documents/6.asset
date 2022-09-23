@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59485859a8019c64c887551f3433690f, type: 3}
+  m_Name: 6
+  m_EditorClassIdentifier: 
+  date: 24/04/2053
+  documentTitle: Free Fashion Creativity
+  documentStart: 'While it is known that the limitations on production, intensive
+    mining and harvesting of materials have improved the health of our planet, we
+    as a society have lost our creative spark for it. We must return to more efficient
+    production of textile, so that each human has the right to express themselves
+    in a way they feel comfortable. '
+  documentmMiddle: "We need: \u2014Allow the construction of additional textile factories
+    \u2014Reduce the heavy existing tax on new clothing items "
+  documentEnd: "We will make sure that the profits from the renewed sales will go
+    towards your office for important ecological causes. Don\u2019t withhold people's
+    right to express themselves! Bianca Lindsey, Founder of Lindsey\u2019s Secret "
+  sign: 'Your Signature: _____________________  Clerk of the Planetary Bureau of
+    Technology and Ecology '
+  influence: 100
+  checkbox: 0

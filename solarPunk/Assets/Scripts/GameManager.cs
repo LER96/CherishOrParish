@@ -96,8 +96,13 @@ public class GameManager : MonoBehaviour
         count = 0;
         moveOn.SetActive(false);
         candraw = false;
+
         for (int i = 0; i < 3; i++)
         {
+            if(allDocuments.Contains(partFiles[i]))
+            {
+                allDocuments.Remove(partFiles[i]);
+            }
             allDocuments[i].checkbox=0;
             partFiles[i] = allDocuments[i];
         }
