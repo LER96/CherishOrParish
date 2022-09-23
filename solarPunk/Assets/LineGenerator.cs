@@ -12,7 +12,6 @@ public class LineGenerator : MonoBehaviour
     {
         if (IsMouseOnImage() == true)
         {
-
             if (Input.GetMouseButtonDown(0))
             {
                 GameObject newLine = Instantiate(linePref);
