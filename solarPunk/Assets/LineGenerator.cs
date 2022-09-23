@@ -9,6 +9,13 @@ public class LineGenerator : MonoBehaviour
     Drawing activeLine;
     public bool hancock;
 
+    Drawing line;
+
+    private void Start()
+    {
+        line = GameObject.FindGameObjectWithTag("Line").GetComponent<Drawing>();
+    }
+
     private void Update()
     {
         if (IsMouseOnImage() == true)
@@ -54,5 +61,10 @@ public class LineGenerator : MonoBehaviour
         }
 
         return raycastResult.Count > 0;
+    }
+
+    public void ResetLine()
+    {
+        line.lineRenderer.positionCount = 0;
     }
 }

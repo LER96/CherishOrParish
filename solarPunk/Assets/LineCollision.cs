@@ -29,4 +29,6 @@ public class LineCollision : MonoBehaviour
             edges.Add(new Vector2(lineRenderPoint.x, lineRenderPoint.y));
         }
     }
+
+    
 }

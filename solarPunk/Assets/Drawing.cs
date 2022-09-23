@@ -29,4 +29,6 @@ public class Drawing : MonoBehaviour
         lineRenderer.positionCount = points.Count;
         lineRenderer.SetPosition(points.Count - 1, point);
     }
+
+    
 }
