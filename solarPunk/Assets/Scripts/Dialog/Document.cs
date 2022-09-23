@@ -7,5 +7,6 @@ public class Document : ScriptableObject
 {
     public string documentTitle;
     public string documentDescription;
-    public int influence; 
+    public int influence;
+    public int checkbox;
 }

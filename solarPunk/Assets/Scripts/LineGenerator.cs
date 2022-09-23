@@ -5,7 +5,9 @@ using UnityEngine.EventSystems;
 
 public class LineGenerator : MonoBehaviour
 {
-    public GameObject linePref;
+    //public GameObject linePref;
+    GameObject linePref;
+    GameManager man;
     Drawing activeLine;
     public bool hancock;
 
@@ -13,29 +15,34 @@ public class LineGenerator : MonoBehaviour
 
     private void Start()
     {
+        linePref= GameObject.FindGameObjectWithTag("Manager");
+        man = linePref.GetComponent<GameManager>();
         line = GameObject.FindGameObjectWithTag("Line").GetComponent<Drawing>();
     }
 
     private void Update()
     {
-        if (IsMouseOnImage() == true)
+        if (man.candraw)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (IsMouseOnImage() == true)
             {
-                GameObject newLine = Instantiate(linePref);
-                activeLine = newLine.GetComponent<Drawing>();
-            }
+                if (Input.GetMouseButtonDown(0))
+                {
+                    GameObject newLine = Instantiate(linePref);
+                    activeLine = newLine.GetComponent<Drawing>();
+                }
 
-            if (Input.GetMouseButtonUp(0))
-            {
-                activeLine = null;
-                hancock = true;
-            }
+                if (Input.GetMouseButtonUp(0))
+                {
+                    activeLine = null;
+                    hancock = true;
+                }
 
-            if (activeLine != null)
-            {
-                Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                activeLine.UpdateLine(mousePos);
+                if (activeLine != null)
+                {
+                    Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    activeLine.UpdateLine(mousePos);
+                }
             }
         }
     }
