@@ -12,18 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59485859a8019c64c887551f3433690f, type: 3}
   m_Name: 8
   m_EditorClassIdentifier: 
-  date: 01/06/2053
-  documentTitle: 'Petition: Heights of Fortia'
-  documentStart: "The people of Fortia have banded together to sign this petition
-    to force every building in the city of Fortia to have grass roofs. This will
-    help eliminate air pollution in the city, as well as improve the mental health
-    of Fortia\u2019s residents."
-  documentmMiddle: "We will need the following to make this happen: \u2014Uphold
-    corporate & government buildings to this standard \u2014Fund this project with
-    government funds \u2014Pay for the workforce required to make this happen "
-  documentEnd: "I hope you will see reason, Sasha Valentine, Head of Fortia\u2019s
-    Ecological Rights Foundation.  "
-  cost: 3
-  profit: 0
-  influence: 1
-  checkbox: 0
+  date: 24/04/2053
+  documentTitle: Free Fashion Creativity
+  documentStart: 'While it is known that the limitations on production, intensive
+    mining and harvesting of materials have improved the health of our planet, we
+    as a society have lost our creative spark for it. We must return to more efficient
+    production of textile, so that each human has the right to express themselves
+    in a way they feel comfortable. '
+  documentmMiddle: "We need: \u2014Allow the construction of additional textile factories
+    \u2014Reduce the heavy existing tax on new clothing items "
+  documentEnd: "We will make sure that the profits from the renewed sales will go
+    towards your office for important ecological causes. Don\u2019t withhold people's
+    right to express themselves! Bianca Lindsey, Founder of Lindsey\u2019s Secret "
+  cost: 0
+  profit: 1
+  influence: -2
+  state: 
+  checkbox: 1

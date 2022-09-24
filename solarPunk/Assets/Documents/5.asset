@@ -12,16 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59485859a8019c64c887551f3433690f, type: 3}
   m_Name: 5
   m_EditorClassIdentifier: 
-  date: 31/03/2053
-  documentTitle: Solar Transparency Act
-  documentStart: While these will be financially heavy endeavours, I believe that
-    making an executive decision to replace current existing windows in all office
-    towers with transparent solar panels could hold immense value.
-  documentmMiddle: "Some of the price will repay itself in time from the energy we
-    generate, but more importantly, it\u2019ll greatly aid us make a change for the
-    better in our environment. "
-  documentEnd: 'Sincerely, Dr. Aashvi Patel '
-  cost: 6
+  date: 01/05/2053
+  documentTitle: Further Housing Request
+  documentStart: With the recent legislation limiting the construction of new buildings,
+    we found ourselves with a housing shortage in Fortia.
+  documentmMiddle: "We require: \u2014Construction of new building complexes in Fortia "
+  documentEnd: 'Sincerely,  Alejandro Alvarez, Citizen of Fortia '
+  cost: 2
   profit: 1
-  influence: 2
-  checkbox: 0
+  influence: -1
+  state: More Houses
+  checkbox: 1

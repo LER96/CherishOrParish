@@ -12,19 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59485859a8019c64c887551f3433690f, type: 3}
   m_Name: 6
   m_EditorClassIdentifier: 
-  date: 24/04/2053
-  documentTitle: Free Fashion Creativity
-  documentStart: 'While it is known that the limitations on production, intensive
-    mining and harvesting of materials have improved the health of our planet, we
-    as a society have lost our creative spark for it. We must return to more efficient
-    production of textile, so that each human has the right to express themselves
-    in a way they feel comfortable. '
-  documentmMiddle: "We need: \u2014Allow the construction of additional textile factories
-    \u2014Reduce the heavy existing tax on new clothing items "
-  documentEnd: "We will make sure that the profits from the renewed sales will go
-    towards your office for important ecological causes. Don\u2019t withhold people's
-    right to express themselves! Bianca Lindsey, Founder of Lindsey\u2019s Secret "
-  cost: 0
-  profit: 1
-  influence: -2
-  checkbox: 0
+  date: "21/04/2053\t"
+  documentTitle: Outer Wilds Initiative
+  documentStart: 'Our capitalistic ways of the past, and even those who linger in
+    the present have brought destruction of many species of animals, and their living
+    places. We should do our best to help rebuild. '
+  documentmMiddle: I suggest we grant some land to these animals in the outskirts
+    of Fortia.
+  documentEnd: 'Please do consider, Dr. Basira Asfour '
+  cost: 2
+  profit: 0
+  influence: 2
+  state: Birds
+  checkbox: 1

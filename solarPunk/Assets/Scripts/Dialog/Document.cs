@@ -15,6 +15,7 @@ public class Document : ScriptableObject
     public float profit;
 
     public int influence;
+    public string state;
 
     //if we did V/X;
     public int checkbox;

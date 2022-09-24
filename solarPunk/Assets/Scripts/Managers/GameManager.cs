@@ -22,14 +22,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject signCanvas;
     [SerializeField] TMP_Text budgetText;
 
-    [SerializeField] int totalInfluence;
+    [SerializeField] public int totalInfluence;
     [SerializeField] int totalBudget;
 
     [SerializeField] LineGenerator line;
     void Start()
     {
         budget = 10;
-        //line = GameObject.FindGameObjectWithTag("Line").GetComponent<LineGenerator>();
+        line = GameObject.FindGameObjectWithTag("Line").GetComponent<LineGenerator>();
         if (allDocuments!=null)
         {
             TakeDoc();
@@ -109,6 +109,10 @@ public class GameManager : MonoBehaviour
     //restore all values
     public void TakeDoc()
     {
+        for(int i=0; i<allDocuments.Count;i++)
+        {
+
+        }
         page = 0;
         count = 0;
         budgetText.text = budget + "M $";
@@ -122,15 +126,17 @@ public class GameManager : MonoBehaviour
             {
                 allDocuments.Remove(partFiles[i]);
             }
-            allDocuments[i].checkbox=0;
-            //partFiles[i] = allDocuments[i];
         }
 
-        for(int i=0; i<3; i++)
+        for (int i = 0; i < allDocuments.Count; i++)
+        {
+            allDocuments[i].checkbox = 0;
+        }
+
+        for (int i=0; i<3; i++)
         {
             partFiles[i] = allDocuments[i];
         }
-        //doc = allDocuments[randomFile];
     }
 
 }

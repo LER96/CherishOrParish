@@ -12,15 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59485859a8019c64c887551f3433690f, type: 3}
   m_Name: 7
   m_EditorClassIdentifier: 
-  date: 17/04/2053
-  documentTitle: The Nano-Wilds Initiative
-  documentStart: 'With natural disasters and deforestation, our world sorely needs
-    natural areas restored. Using the newest Nano-helper 2.7 from NanO Inc., we can
-    plant seeds and compost at extreme efficiency. '
-  documentmMiddle: "What we need: \u2014Exclusivity deal between NanO Inc. and the
-    government. \u2014Allow the construction of additional NanO Inc. production facilities. "
-  documentEnd: 'Sincerely,  Johan Collins, Chief Technological Officer of NanO Inc. '
-  cost: 3
+  date: 31/03/2053
+  documentTitle: Solar Transparency Act
+  documentStart: While these will be financially heavy endeavours, I believe that
+    making an executive decision to replace current existing windows in all office
+    towers with transparent solar panels could hold immense value.
+  documentmMiddle: "Some of the price will repay itself in time from the energy we
+    generate, but more importantly, it\u2019ll greatly aid us make a change for the
+    better in our environment. "
+  documentEnd: 'Sincerely, Dr. Aashvi Patel '
+  cost: 6
   profit: 1
-  influence: 0
-  checkbox: 0
+  influence: 2
+  state: Glass
+  checkbox: -1

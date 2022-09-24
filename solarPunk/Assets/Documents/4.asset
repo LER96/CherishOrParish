@@ -12,15 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59485859a8019c64c887551f3433690f, type: 3}
   m_Name: 4
   m_EditorClassIdentifier: 
-  date: "21/04/2053\t"
-  documentTitle: Outer Wilds Initiative
-  documentStart: 'Our capitalistic ways of the past, and even those who linger in
-    the present have brought destruction of many species of animals, and their living
-    places. We should do our best to help rebuild. '
-  documentmMiddle: I suggest we grant some land to these animals in the outskirts
-    of Fortia.
-  documentEnd: 'Please do consider, Dr. Basira Asfour '
-  cost: 2
+  date: 01/06/2053
+  documentTitle: 'Petition: Heights of Fortia'
+  documentStart: "The people of Fortia have banded together to sign this petition
+    to force every building in the city of Fortia to have grass roofs. This will
+    help eliminate air pollution in the city, as well as improve the mental health
+    of Fortia\u2019s residents."
+  documentmMiddle: "We will need the following to make this happen: \u2014Uphold
+    corporate & government buildings to this standard \u2014Fund this project with
+    government funds \u2014Pay for the workforce required to make this happen "
+  documentEnd: "I hope you will see reason, Sasha Valentine, Head of Fortia\u2019s
+    Ecological Rights Foundation.  "
+  cost: 3
   profit: 0
-  influence: 2
-  checkbox: 0
+  influence: 1
+  state: Grass
+  checkbox: -1

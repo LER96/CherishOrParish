@@ -12,13 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59485859a8019c64c887551f3433690f, type: 3}
   m_Name: 3
   m_EditorClassIdentifier: 
-  date: 01/05/2053
-  documentTitle: Further Housing Request
-  documentStart: With the recent legislation limiting the construction of new buildings,
-    we found ourselves with a housing shortage in Fortia.
-  documentmMiddle: "We require: \u2014Construction of new building complexes in Fortia "
-  documentEnd: 'Sincerely,  Alejandro Alvarez, Citizen of Fortia '
-  cost: 2
-  profit: 1
-  influence: -1
-  checkbox: 0
+  date: 17/04/2053
+  documentTitle: Industrial Regulation Reform
+  documentStart: The extreme regulation on the industrial sector withholds humanity
+    from the potential of achieving higher levels of wealth and prosperity. There
+    is a shortage of goods for people to purchase.
+  documentmMiddle: "The following restrictions must be removed for a more prosperous
+    world: \u2014Remove the CO2 emission limitation law to allow further production
+    of goods \u2014Remove embargo on Bamazon goods \u2014Allow for 27 extra factories
+    around the world "
+  documentEnd: ' Kind Regards, Bess Jefof, CEO of Bamazon Goods. '
+  cost: 0
+  profit: 4
+  influence: -5
+  state: 
+  checkbox: 1
