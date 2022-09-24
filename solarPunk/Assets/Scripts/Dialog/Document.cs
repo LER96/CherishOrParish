@@ -17,6 +17,8 @@ public class Document : ScriptableObject
     public int influence;
     public string state;
 
+    public string news;
+
     //if we did V/X;
     public int checkbox;
 }

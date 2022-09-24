@@ -25,4 +25,6 @@ MonoBehaviour:
   profit: 1
   influence: 2
   state: Glass
+  news: "Headline: BREAKING NEWS: \u201CNewest Solar panel technology has helped
+    reduce Carbon dioxide emissions as well as generate renewable energy.\u201D"
   checkbox: -1

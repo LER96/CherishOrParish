@@ -13,6 +13,7 @@ public class DocumentManager : MonoBehaviour
     public TMP_Text endDescriptionText;
     public TMP_Text costText;
     public TMP_Text proFit;
+    //public TMP_Text newsBar;
 
     int p;
 

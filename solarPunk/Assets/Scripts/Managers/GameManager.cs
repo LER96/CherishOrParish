@@ -24,9 +24,12 @@ public class GameManager : MonoBehaviour
     bool tabletShow;
 
     [SerializeField] TMP_Text budgetText;
+    [SerializeField] TMP_Text newsText;
 
     [SerializeField] public int totalInfluence;
     [SerializeField] int totalBudget;
+
+    [SerializeField] int cycle = 0;
 
     [SerializeField] LineGenerator line;
     void Start()
@@ -41,6 +44,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+
         if (tabletShow)
         {
             tablet.SetActive(true);
@@ -58,14 +62,21 @@ public class GameManager : MonoBehaviour
         }
         else
             tablet.SetActive(false);
+
     }
 
     //button appear when you sign
     public void MoveON()
     {
-        candraw = false;
-        line.hancock = false;
-        TakeDoc();
+        cycle++;
+        if (cycle < 3)
+        {
+            candraw = false;
+            line.hancock = false;
+            TakeDoc();
+        }
+        else
+            QuitGame();
     }
 
     //V button
@@ -80,6 +91,7 @@ public class GameManager : MonoBehaviour
                 count++;
             }
             partFiles[page].checkbox = 1;
+            newsText.text = partFiles[page].news;
             if (page < 2)
             {
                 page++;
@@ -99,6 +111,7 @@ public class GameManager : MonoBehaviour
             count++;
         }
         partFiles[page].checkbox = -1;
+        newsText.text = "";
         if (page < 2)
         {
             page++;
@@ -128,7 +141,7 @@ public class GameManager : MonoBehaviour
     public void TakeDoc()
     {
         NextRound();
-        if (allDocuments != null)
+        if (allDocuments !=null)
         {
             for (int i = 0; i < allDocuments.Count; i++)
             {
@@ -140,10 +153,6 @@ public class GameManager : MonoBehaviour
                 partFiles[i] = allDocuments[i];
             }
         }
-        else
-        {
-
-        }
     }
 
     public void NextRound()
@@ -151,6 +160,7 @@ public class GameManager : MonoBehaviour
         page = 0;
         count = 0;
         budgetText.text = budget + "M $";
+        newsText.text = "";
         moveOn.SetActive(false);
         signCanvas.SetActive(false);
         candraw = false;
@@ -162,6 +172,11 @@ public class GameManager : MonoBehaviour
                 allDocuments.Remove(partFiles[i]);
             }
         }
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
 }

@@ -26,4 +26,7 @@ MonoBehaviour:
   profit: 4
   influence: -5
   state: 
+  news: "Headline: BREAKING NEWS: \u201CBess Jefof earns an astonishing 700% profit
+    increase. Appointed as the new director of the Planetary Bureau of Technology
+    and Ecology.\u201D"
   checkbox: 1

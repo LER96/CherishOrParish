@@ -24,4 +24,7 @@ MonoBehaviour:
   profit: 1
   influence: 0
   state: 
-  checkbox: 1
+  news: "Headline: BREAKING NEWS: \u201CSeveral forests that were once part of the
+    Fortia districts were restored. NanO Inc. factories have been created on the
+    last plot of land housing green forest foxes.\u201D"
+  checkbox: -1

@@ -23,4 +23,6 @@ MonoBehaviour:
   profit: 0
   influence: 1
   state: 
-  checkbox: -1
+  news: "Headline: \u201CLocal Fortia Community seizes land to create new gardens
+    from the Entek corporation\u201D\u201D"
+  checkbox: 1

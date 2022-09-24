@@ -28,4 +28,7 @@ MonoBehaviour:
   profit: 1
   influence: -2
   state: 
+  news: "Headline: BREAKING NEWS: \u201CRecent collaboration of fashion brands and
+    the government helps raise money for homeless citizens. Textile factories back
+    to harming the environment?\u201D"
   checkbox: 1

@@ -22,4 +22,6 @@ MonoBehaviour:
   profit: 1
   influence: -1
   state: More Houses
+  news: "Headline: \u201CNew apartments constructed in Western Fortia. This project
+    eliminated the last plot of free land in the district.\u201D"
   checkbox: 1

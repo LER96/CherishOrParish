@@ -27,4 +27,6 @@ MonoBehaviour:
   profit: 0
   influence: 1
   state: Grass
+  news: "Headline: BREAKING NEWS: \u201CGrass roofs in Fortia help lower the city\u2019s
+    air pollution to the lowest it\u2019s been in 50 years.\u201D"
   checkbox: -1

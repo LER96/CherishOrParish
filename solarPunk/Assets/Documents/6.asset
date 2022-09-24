@@ -24,4 +24,6 @@ MonoBehaviour:
   profit: 0
   influence: 2
   state: Birds
-  checkbox: 1
+  news: "Headline: BREAKING NEWS: \u201CThe Eastern Wilderness of Fortia has begun
+    healing. Scarlet macaws have been spotted in the city again.\u201D"
+  checkbox: -1

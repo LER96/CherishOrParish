@@ -24,4 +24,8 @@ MonoBehaviour:
   cost: 2
   profit: 4
   influence: -1
-  checkbox: 0
+  state: 
+  news: "Headline: BREAKING NEWS: \u201CSapphire AI solves 900 year old math problem.
+    New computer chip factories have raised air pollution in the Fortia district
+    by 2%\u201D"
+  checkbox: 1
