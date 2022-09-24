@@ -24,7 +24,7 @@ MonoBehaviour:
   documentEnd: "We will make sure that the profits from the renewed sales will go
     towards your office for important ecological causes. Don\u2019t withhold people's
     right to express themselves! Bianca Lindsey, Founder of Lindsey\u2019s Secret "
-  sign: 'Your Signature: _____________________  Clerk of the Planetary Bureau of
-    Technology and Ecology '
-  influence: 100
+  cost: 0
+  profit: 1
+  influence: -2
   checkbox: 0

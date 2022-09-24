@@ -18,7 +18,7 @@ MonoBehaviour:
     we found ourselves with a housing shortage in Fortia.
   documentmMiddle: "We require: \u2014Construction of new building complexes in Fortia "
   documentEnd: 'Sincerely,  Alejandro Alvarez, Citizen of Fortia '
-  sign: 'Your Signature: _____________________  Clerk of the Planetary Bureau of
-    Technology and Ecology '
-  influence: 100
+  cost: 2
+  profit: 1
+  influence: -1
   checkbox: 0

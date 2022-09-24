@@ -21,7 +21,7 @@ MonoBehaviour:
     generate, but more importantly, it\u2019ll greatly aid us make a change for the
     better in our environment. "
   documentEnd: 'Sincerely, Dr. Aashvi Patel '
-  sign: 'Your Signature: _____________________  Clerk of the Planetary Bureau of
-    Technology and Ecology '
-  influence: 100
+  cost: 6
+  profit: 1
+  influence: 2
   checkbox: 0

@@ -20,7 +20,7 @@ MonoBehaviour:
   documentmMiddle: I suggest we grant some land to these animals in the outskirts
     of Fortia.
   documentEnd: 'Please do consider, Dr. Basira Asfour '
-  sign: 'Your Signature: _____________________  Clerk of the Planetary Bureau of
-    Technology and Ecology '
-  influence: 100
+  cost: 2
+  profit: 0
+  influence: 2
   checkbox: 0

@@ -19,7 +19,7 @@ MonoBehaviour:
   documentmMiddle: I humbly request, in the name of other citizens and I, that you
     grant more land to well kept gardens rather than an Entek parking lot.
   documentEnd: 'Sincerely,  Edward Jones, A concerned citizen. '
-  sign: 'Your Signature: _____________________  Clerk of the Planetary Bureau of
-    Technology and Ecology '
-  influence: 100
-  checkbox: 1
+  cost: 2
+  profit: 0
+  influence: 1
+  checkbox: 0

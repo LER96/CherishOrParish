@@ -23,7 +23,7 @@ MonoBehaviour:
     government funds \u2014Pay for the workforce required to make this happen "
   documentEnd: "I hope you will see reason, Sasha Valentine, Head of Fortia\u2019s
     Ecological Rights Foundation.  "
-  sign: 'Your Signature: _____________________  Clerk of the Planetary Bureau of
-    Technology and Ecology '
-  influence: 100
+  cost: 3
+  profit: 0
+  influence: 1
   checkbox: 0

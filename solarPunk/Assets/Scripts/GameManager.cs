@@ -1,28 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject[] pages = new GameObject[3];
 
     public List<Document> allDocuments;
-    [SerializeField]public  Document[] partFiles = new Document[3];
+    public float budget;
+
+    [SerializeField] public Document[] partFiles = new Document[3];
     [SerializeField] public Document doc;
+
+    [SerializeField] public int page=0;
+    [SerializeField] public bool candraw;
+    [SerializeField] public int count;
 
     [SerializeField] GameObject moveOn;
     [SerializeField] GameObject signCanvas;
+    [SerializeField] TMP_Text budgetText;
 
-    [SerializeField] int totalScore;
-    [SerializeField] int randomFile;
-    [SerializeField] public int page=0;
-    [SerializeField] public bool candraw;
+    [SerializeField] int totalInfluence;
+    [SerializeField] int totalBudget;
 
     [SerializeField] LineGenerator line;
-    [SerializeField] public int count;
-    // Start is called before the first frame update
     void Start()
     {
+        budget = 10;
         //line = GameObject.FindGameObjectWithTag("Line").GetComponent<LineGenerator>();
         if (allDocuments!=null)
         {
@@ -55,17 +61,24 @@ public class GameManager : MonoBehaviour
     //V button
     public void Sign()
     {
-        totalScore += partFiles[page].influence;
-        if (partFiles[page].checkbox == 0)
+        totalInfluence += partFiles[page].influence;
+        if (budget - partFiles[page].cost > 0)
         {
-            count++;
+            budget -= partFiles[page].cost;
+            if (partFiles[page].checkbox == 0)
+            {
+                count++;
+            }
+            partFiles[page].checkbox = 1;
+            if (page < 2)
+            {
+                page++;
+            }
         }
-        partFiles[page].checkbox = 1;
-        if (page < 2)
+        else
         {
-            page++;
+            Debug.Log("Cant Do");
         }
-
         //button.SetActive(false);
         //RemoveDoc();
     }
@@ -96,7 +109,9 @@ public class GameManager : MonoBehaviour
     //restore all values
     public void TakeDoc()
     {
+        page = 0;
         count = 0;
+        budgetText.text = budget + "M $";
         moveOn.SetActive(false);
         signCanvas.SetActive(false);
         candraw = false;
@@ -108,6 +123,11 @@ public class GameManager : MonoBehaviour
                 allDocuments.Remove(partFiles[i]);
             }
             allDocuments[i].checkbox=0;
+            //partFiles[i] = allDocuments[i];
+        }
+
+        for(int i=0; i<3; i++)
+        {
             partFiles[i] = allDocuments[i];
         }
         //doc = allDocuments[randomFile];

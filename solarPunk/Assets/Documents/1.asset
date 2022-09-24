@@ -22,7 +22,7 @@ MonoBehaviour:
     of goods \u2014Remove embargo on Bamazon goods \u2014Allow for 27 extra factories
     around the world "
   documentEnd: ' Kind Regards, Bess Jefof, CEO of Bamazon Goods. '
-  sign: 'Your Signature: _____________________  Clerk of the Planetary Bureau of
-    Technology and Ecology '
-  influence: 100
+  cost: 0
+  profit: 4
+  influence: -5
   checkbox: 0

@@ -29,9 +29,13 @@ public class DocumentManager : MonoBehaviour
         char[] words = manage.partFiles[p].documentmMiddle.ToCharArray();
         for (int i = 0; i < words.Length; i++)
         {
-            if (words[i] == dots || words[i] == lines)
+            if (words[i] == dots)
             {
-                Split(i);
+                Split(i+1);
+            }
+            if(words[i] == lines)
+            {
+                Split(i+1);
             }
         }
 
@@ -45,6 +49,7 @@ public class DocumentManager : MonoBehaviour
 
     }
 
+    // string name= "liron \n rotman
     public void Split(int num)
     {
         middleDescriptionText.text = middleDescriptionText.text.Insert(num, "\n");

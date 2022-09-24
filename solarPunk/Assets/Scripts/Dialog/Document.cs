@@ -11,6 +11,11 @@ public class Document : ScriptableObject
     public string documentmMiddle;
     public string documentEnd;
 
+    public float cost;
+    public float profit;
+
     public int influence;
+
+    //if we did V/X;
     public int checkbox;
 }
