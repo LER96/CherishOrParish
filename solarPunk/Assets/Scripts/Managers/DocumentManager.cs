@@ -11,6 +11,8 @@ public class DocumentManager : MonoBehaviour
     public TMP_Text startDescriptionText;
     public TMP_Text middleDescriptionText;
     public TMP_Text endDescriptionText;
+    public TMP_Text costText;
+    public TMP_Text proFit;
 
     int p;
 
@@ -44,10 +46,13 @@ public class DocumentManager : MonoBehaviour
         date.text = manage.partFiles[p].date;
         nameText.text = manage.partFiles[p].documentTitle;
         startDescriptionText.text = manage.partFiles[p].documentStart;
-        //middleDescriptionText.text = manage.partFiles[p].documentmMiddle;
+    
         endDescriptionText.text = manage.partFiles[p].documentEnd;
 
-    }
+        proFit.text = "Profit: "+ manage.partFiles[p].profit+"M$";
+        costText.text="Cost: "+ manage.partFiles[p].cost+"M$";
+
+}
 
     // string name= "liron \n rotman
     public void Split(int num)

@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject moveOn;
     [SerializeField] GameObject signCanvas;
+    [SerializeField] GameObject tablet;
+    bool tabletShow;
+
     [SerializeField] TMP_Text budgetText;
 
     [SerializeField] public int totalInfluence;
@@ -38,16 +41,23 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        line = GameObject.FindGameObjectWithTag("Line").GetComponent<LineGenerator>();
-        if (count == 3)
+        if (tabletShow)
         {
-            candraw = true;
-            signCanvas.SetActive(true);
-            if (line.hancock)
+            tablet.SetActive(true);
+
+            line = GameObject.FindGameObjectWithTag("Line").GetComponent<LineGenerator>();
+            if (count == 3)
             {
-                moveOn.SetActive(true);
+                candraw = true;
+                signCanvas.SetActive(true);
+                if (line.hancock)
+                {
+                    moveOn.SetActive(true);
+                }
             }
         }
+        else
+            tablet.SetActive(false);
     }
 
     //button appear when you sign
@@ -79,8 +89,6 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Cant Do");
         }
-        //button.SetActive(false);
-        //RemoveDoc();
     }
 
     //X button
@@ -95,8 +103,6 @@ public class GameManager : MonoBehaviour
         {
             page++;
         }
-        //allDocuments.Remove(allDocuments[randomFile]);
-        //TakeDoc();
     }
 
     //Get The Page
@@ -105,14 +111,43 @@ public class GameManager : MonoBehaviour
         page = num;
     }
 
+    public void Show()
+    {
+        if(tabletShow)
+        {
+            tabletShow = false;
+        }
+        else
+        {
+            tabletShow = true;
+        }
+    }
+
     //Take 3 documents from the list
     //restore all values
     public void TakeDoc()
     {
-        for(int i=0; i<allDocuments.Count;i++)
+        NextRound();
+        if (allDocuments != null)
+        {
+            for (int i = 0; i < allDocuments.Count; i++)
+            {
+                allDocuments[i].checkbox = 0;
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                partFiles[i] = allDocuments[i];
+            }
+        }
+        else
         {
 
         }
+    }
+
+    public void NextRound()
+    {
         page = 0;
         count = 0;
         budgetText.text = budget + "M $";
@@ -122,20 +157,10 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < 3; i++)
         {
-            if(allDocuments.Contains(partFiles[i]))
+            if (allDocuments.Contains(partFiles[i]))
             {
                 allDocuments.Remove(partFiles[i]);
             }
-        }
-
-        for (int i = 0; i < allDocuments.Count; i++)
-        {
-            allDocuments[i].checkbox = 0;
-        }
-
-        for (int i=0; i<3; i++)
-        {
-            partFiles[i] = allDocuments[i];
         }
     }
 
