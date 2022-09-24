@@ -6,7 +6,9 @@ using UnityEngine.EventSystems;
 public class LineGenerator : MonoBehaviour
 {
     //public GameObject linePref;
-    [SerializeField] GameObject linePref;
+    public GameObject linePrefab;
+    [SerializeField] public GameObject gameManager;
+    [SerializeField] List<GameObject> signature;
     GameManager man;
     Drawing activeLine;
     public bool hancock;
@@ -15,21 +17,22 @@ public class LineGenerator : MonoBehaviour
 
     private void Start()
     {
-        linePref= GameObject.FindGameObjectWithTag("Manager");
+        gameManager= GameObject.FindGameObjectWithTag("Manager");
         //man = linePref.GetComponent<GameManager>();
         line = GameObject.FindGameObjectWithTag("Line").GetComponent<Drawing>();
     }
 
     private void Update()
     {
-        man = linePref.GetComponent<GameManager>();
+        man = gameManager.GetComponent<GameManager>();
         if (man.candraw)
         {
             if (IsMouseOnImage() == true)
             {
                 if (Input.GetMouseButtonDown(0))
                 {
-                    GameObject newLine = Instantiate(linePref);
+                    GameObject newLine = Instantiate(linePrefab);
+                    signature.Add(newLine);
                     activeLine = newLine.GetComponent<Drawing>();
                 }
 
@@ -45,6 +48,10 @@ public class LineGenerator : MonoBehaviour
                     activeLine.UpdateLine(mousePos);
                 }
             }
+        }
+        else if(man.candraw==false)
+        {
+            ResetLine();
         }
     }
 
@@ -73,6 +80,12 @@ public class LineGenerator : MonoBehaviour
 
     public void ResetLine()
     {
-        line.lineRenderer.positionCount = 0;
+        Debug.Log("erase");
+        for(int i=0; i<signature.Count;i++)
+        {
+            GameObject.Destroy(signature[i]);
+            signature.Remove(signature[i]);
+        }
+        //line.lineRenderer.positionCount = 0;
     }
 }

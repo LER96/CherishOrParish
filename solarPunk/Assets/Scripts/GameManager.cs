@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject linePrefab;
     public GameObject[] pages = new GameObject[3];
 
     public List<Document> allDocuments;
@@ -12,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public Document doc;
 
     [SerializeField] GameObject moveOn;
+    [SerializeField] GameObject signCanvas;
 
     [SerializeField] int totalScore;
     [SerializeField] int randomFile;
@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public bool candraw;
 
     [SerializeField] LineGenerator line;
-    [SerializeField] int count;
+    [SerializeField] public int count;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
         if (count == 3)
         {
             candraw = true;
+            signCanvas.SetActive(true);
             if (line.hancock)
             {
                 moveOn.SetActive(true);
@@ -47,6 +48,7 @@ public class GameManager : MonoBehaviour
     public void MoveON()
     {
         candraw = false;
+        line.hancock = false;
         TakeDoc();
     }
 
@@ -59,10 +61,11 @@ public class GameManager : MonoBehaviour
             count++;
         }
         partFiles[page].checkbox = 1;
-        if(page<2)
+        if (page < 2)
         {
             page++;
         }
+
         //button.SetActive(false);
         //RemoveDoc();
     }
@@ -95,6 +98,7 @@ public class GameManager : MonoBehaviour
     {
         count = 0;
         moveOn.SetActive(false);
+        signCanvas.SetActive(false);
         candraw = false;
 
         for (int i = 0; i < 3; i++)

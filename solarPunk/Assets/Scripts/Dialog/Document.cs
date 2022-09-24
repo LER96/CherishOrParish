@@ -10,7 +10,6 @@ public class Document : ScriptableObject
     public string documentStart;
     public string documentmMiddle;
     public string documentEnd;
-    public string sign;
 
     public int influence;
     public int checkbox;

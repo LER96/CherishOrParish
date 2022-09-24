@@ -11,7 +11,6 @@ public class DocumentManager : MonoBehaviour
     public TMP_Text startDescriptionText;
     public TMP_Text middleDescriptionText;
     public TMP_Text endDescriptionText;
-    public TMP_Text signText;
 
     int p;
 
@@ -43,7 +42,6 @@ public class DocumentManager : MonoBehaviour
         startDescriptionText.text = manage.partFiles[p].documentStart;
         //middleDescriptionText.text = manage.partFiles[p].documentmMiddle;
         endDescriptionText.text = manage.partFiles[p].documentEnd;
-        signText.text = manage.partFiles[p].sign;
 
     }
 

@@ -1,7 +1,10 @@
 ﻿
 using UnityEngine;
+using System.Collections.Generic;
+using UnityEngine.UI;
+using TMPro;
 
-public class Clock : GameManager
+public class Clock : MonoBehaviour
 {
 
     // Start is called before the first frame update
@@ -10,9 +13,5 @@ public class Clock : GameManager
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Manager
   - Line
+  - Sign
   layers:
   - Default
   - TransparentFX
