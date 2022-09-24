@@ -159,7 +159,7 @@ public class GameManager : MonoBehaviour
     {
         page = 0;
         count = 0;
-        budgetText.text = budget + "M $";
+        budgetText.text = "Wallet: "+ budget + "M $";
         newsText.text = "";
         moveOn.SetActive(false);
         signCanvas.SetActive(false);
