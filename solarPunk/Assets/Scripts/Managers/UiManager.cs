@@ -26,7 +26,6 @@ public class UiManager : MonoBehaviour
     //0 regular, 1 moregrass
     [SerializeField] Sprite[] grass = new Sprite[2];
 
-
     [SerializeField] List<Document> copyDoc;
     [SerializeField] Document[] copyFiles= new Document[3];
 
@@ -38,7 +37,6 @@ public class UiManager : MonoBehaviour
     string moreH = "More Houses";
     string bird = "Birds";
 
-    bool isGlass;
     bool isGrass;
     bool moreHouses;
 
@@ -78,7 +76,7 @@ public class UiManager : MonoBehaviour
             middleGroundImg.sprite = middleGround[0];
             if (manage.totalInfluence >= 3)
             {
-                foreGroundImg.sprite = foreGround[1];
+                foreGroundImg.sprite = foreGround[0];
                 if (manage.totalInfluence >= 5)
                 {
                     skyImg.sprite = sky[0];
@@ -100,6 +98,7 @@ public class UiManager : MonoBehaviour
             if (copyFiles[i].state == moreH && copyFiles[i].checkbox == 1)
             {
                 morebuildingImg.sprite = morebuildings[0];
+                moreHouses = true;
                 if(isGrass)
                 {
                     grassImg.sprite = grass[1];

@@ -6,7 +6,13 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject[] pages = new GameObject[3];
+    public Image[] pages = new Image[3];
+
+    public Sprite[] onpage;
+
+    public Image showTab;
+    public Sprite on;
+    public Sprite off;
 
     public List<Document> allDocuments;
     public float budget;
@@ -34,6 +40,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] LineGenerator line;
     void Start()
     {
+        pages[0].sprite = onpage[1];
         budget = 10;
         line = GameObject.FindGameObjectWithTag("Line").GetComponent<LineGenerator>();
         if (allDocuments!=null)
@@ -62,6 +69,12 @@ public class GameManager : MonoBehaviour
         }
         else
             tablet.SetActive(false);
+
+        for (int i = 0; i < 3; i++)
+        {
+            pages[i].sprite = onpage[0];
+        }
+        pages[page].sprite = onpage[1];
 
     }
 
@@ -129,10 +142,12 @@ public class GameManager : MonoBehaviour
         if(tabletShow)
         {
             tabletShow = false;
+            showTab.sprite = on;
         }
         else
         {
             tabletShow = true;
+            showTab.sprite = off;
         }
     }
 
